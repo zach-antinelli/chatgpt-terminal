@@ -32,7 +32,6 @@ def non_interactive(prompt):
     '''
     Non-interactive prompt, run the script with a string argument.
     '''
-    openai.api_key = os.getenv('OPENAI_API_KEY')
     completions = openai.Completion.create(
         engine="text-davinci-003",
         prompt=prompt,
@@ -91,7 +90,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
